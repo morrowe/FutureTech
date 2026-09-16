@@ -1,0 +1,151 @@
+https://www.figma.com/design/hkME2DLQOBZFLLoy7VxSCk/Многостраничный-сайт---AI-блог?node-id=18-214&p=f&t=d4YrKCOhZ5Mx0hHX-0
+CREATE TABLE news (
+    id SERIAL PRIMARY KEY,
+    img varchar,
+    name varchar,
+    categ varchar,
+    liike varchar,
+    send varchar
+);
+INSERT INTO news (id, img, name, categ, liike, send) VALUES
+(1, 'http://localhost:5173/src/img/bg2.png', 'A Decisive Victory for Progressive Policies', 'Politics', '2.2k', '60'),
+(2, 'http://localhost:5173/src/img/bg3.png', 'Tech Giants Unveil Cutting-Edge AI Innovations', 'Technology', '10k', '92'),
+(3, 'http://localhost:5173/src/img/bg4.png', 'COVID-19 Variants', 'Health', '11k', '124');
+
+CREATE TABLE neww (
+    id SERIAL PRIMARY KEY,
+    img varchar,
+    name varchar,
+    text varchar,
+    categ varchar,
+    date varchar,
+    author varchar,
+    liike varchar,
+    send varchar
+);
+INSERT INTO neww (id, img, name, text, categ, date, author, liike, send) VALUES
+(1, 'http://localhost:5173/src/img/bg1.png', 'Global Climate Summit Addresses Urgent Climate Action', 'World leaders gathered at the Global Climate Summit to discuss urgent climate action, emissions reductions, and renewable energy targets.', 'Environment', 'October 10, 2023', 'Jane Smith', '14k', '204');
+
+CREATE TABLE people (
+    id SERIAL PRIMARY KEY,
+    img varchar,
+    name varchar,
+    work varchar,
+    data varchar,
+    head varchar,
+    text varchar,
+    liike varchar,
+    comm varchar,
+    send varchar
+);
+INSERT INTO people (id, img, name, work, data, head, text, liike, comm, send) VALUES
+(1, 'http://localhost:5173/src/img/people1.png', 'John Techson', 'Technology', 'October 15, 2023', 'Tech Giants Announce New Product Line', 'Explore the latest innovations from tech industry leaders, unveiling new products that promise to transform the digital landscape', '24.5k', '50', '20'),
+(2, 'http://localhost:5173/src/img/people2.png', 'Sarah Ethicist', 'Technology', 'October 11, 2023', 'The Future of Autonomous Vehicles', 'An in-depth analysis of the rapid advancements in autonomous vehicle technology and their impact on transportation.', '32k', '72', '18'),
+(3, 'http://localhost:5173/src/img/people3.png', 'Astronomer X', 'Technology', 'October 10, 2023', 'Tech Startups Secure Record Funding', 'An overview of the recent surge in funding for tech startups, shaping the entrepreneurial landscape.', '20k', '31', '12');
+
+CREATE TABLE video (
+    id SERIAL PRIMARY KEY,
+    img varchar,
+    time varchar,
+    name varchar,
+    text varchar
+);
+INSERT INTO video (id, img, time, name, text) VALUES
+(1, 'http://localhost:5173/src/img/bg5.png', '2.30 min', 'Mars Exploration: Unveiling Alien Landscapes', 'Embark on a journey through the Red Planets breathtaking landscapes and uncover the mysteries of Mars.'),
+(2, 'http://localhost:5173/src/img/bg6.png', '5.10 min', 'Blockchain Explained: A Revolution in Finance', 'Delve into the world of blockchain technology and its transformative impact on the financial industry.'),
+(3, 'http://localhost:5173/src/img/bg7.png', '1.55 min', 'Breaking the Silence: Mental Health Awareness in the Workplace', 'An exploration of the importance of mental health awareness and the initiatives reshaping workplaces for employee well-being.'),
+(4, 'http://localhost:5173/src/img/bg8.png', '4.39 min', 'Revolutionizing Investment Strategies', 'An in-depth look at global efforts to conserve biodiversity and safeguard endangered species from extinction.');
+
+CREATE TABLE footr (
+    id SERIAL PRIMARY KEY,
+    name varchar,
+    info varchar
+);
+INSERT INTO footr (id, name, info) VALUES
+(1, 'Resource Access', 'Visitors can access a wide range of resources, including ebooks, whitepapers, reports.'),
+(2, 'Community Forum', 'Join our active community forum to discuss industry trends, share insights, and collaborate with peers.'),
+(3, 'Tech Events', 'Stay updated on upcoming tech events, webinars, and conferences to enhance your knowledge.');
+
+CREATE TABLE articl (
+    id SERIAL PRIMARY KEY,
+    img varchar,
+    head varchar,
+    host varchar,
+    bg varchar,
+    name varchar,
+    text varchar,
+    episod varchar,
+    info varchar,
+    reales varchar
+);
+INSERT INTO articl (id, img, head, host, bg, name, text, episod, info, reales) VALUES
+(1, 'http://localhost:5173/src/img/icon1.png', 'AI Revolution', 'Dr. Sarah Mitchell', 'http://localhost:5173/src/img/bg10.png', 'Delves into the transformative impact of AI', 'Join Dr. Sarah Mitchell as she delves into the transformative impact of AI on industries, featuring expert interviews and real-world case studies. Explore the possibilities of AI in healthcare, finance, and more.', '50', '30 min', 'Weekly'),
+(2, 'http://localhost:5173/src/img/icon2.png', 'AI Conversations', 'Mark Anderson', 'http://localhost:5173/src/img/bg11.png', 'Engage in thought-provoking conversations with leading experts.', 'Mark discusses the future of AI, the impact on society, and how it's shaping industries worldwide. Engage in thought-provoking conversations with leading experts.', '40', '50 min', 'Monthly');
+
+CREATE TABLE rolik (
+    id SERIAL PRIMARY KEY,
+    img varchar,
+    time varchar,
+    name varchar,
+    info varchar
+);
+INSERT INTO rolik (id, img, time, name, info) VALUES
+(1, 'http://localhost:5173/src/img/bg12.png', '2.31 min', 'AI in Healthcare', 'Dr. Lisa Adams discusses how AI is revolutionizing healthcare, from diagnostic tools to patient care.'),
+(2, 'http://localhost:5173/src/img/bg13.png', '5.50 min', 'AI Ethics', 'Explore the ethical dilemmas and considerations surrounding AI with guest speaker Dr. Michael Turner.'),
+(3, 'http://localhost:5173/src/img/bg14.png', '6.34 min', 'Machine Learning Explained', 'Dive into the intricacies of machine learning with AI expert Sarah Davis. In this episode'),
+(4, 'http://localhost:5173/src/img/bg15.png', '1.40 min', 'AI and the Future of Work', 'Dr. Olivia White joins John Parker to discuss the evolving role of AI in the workplace.'),
+(5, 'http://localhost:5173/src/img/bg16.png', '8.33 min', 'AI in Education', 'Explore the role of AI in education as Emily Turner discusses how AI is transforming the learning experience.'),
+(6, 'http://localhost:5173/src/img/bg17.png', '3.39 min', 'AI in Entertainment', 'David Smith as they explore the influence of AI in the entertainment industry.');
+
+CREATE TABLE pluses (
+    id SERIAL PRIMARY KEY,
+    name varchar,
+    info varchar
+);
+INSERT INTO pluses (id, name, info) VALUES
+(1, '300', 'Resources available'),
+(2, '12k', 'Total Downloads'),
+(3, '10k', 'Active Users'),
+(4, '100', 'Countries Accesses Our Content ');
+
+CREATE TABLE paper (
+    id SERIAL PRIMARY KEY,
+    img varchar,
+    head varchar,
+    info varchar,
+    bg varchar,
+    name varchar,
+    text varchar,
+    date varchar,
+    categ varchar,
+    author varchar
+);
+INSERT INTO paper (id, img, head, info, bg, name, text, date, categ, author) VALUES
+(1, 'http://localhost:5173/src/img/icon3.png', 'Quantum Computing Whitepaper', 'Provides technical specifications and requirements for implementing quantum computing systems.', 'http://localhost:5173/src/img/bg18.png', 'Quantum Computing Whitepaper', 'An in-depth whitepaper exploring the principles, applications, and potential impact of quantum computing.', 'July 2023', 'Quantum Computing', 'Dr. Quantum'),
+(2, 'http://localhost:5173/src/img/icon4.png', 'Space Exploration Whitepaper', 'Explores Mars colonization, asteroid resource potential, and space tourism.', 'http://localhost:5173/src/img/bg19.png', 'Space Exploration Whitepaper', 'An in-depth whitepaper covering the latest advancements in space exploration, including Mars missions and asteroid mining.', 'September 2023', 'Space Exploration', 'FutureTech Space Division');
+
+CREATE TABLE trends (
+    id SERIAL PRIMARY KEY,
+    img varchar,
+    name varchar,
+    info varchar
+);
+INSERT INTO trends (id, img, name, info) VALUES
+(1, 'http://localhost:5173/src/img/bg20.png', 'FutureTech Trends 2024', 'An ebook that predicts upcoming technology trends for the next year, including AI developments'),
+(2, 'http://localhost:5173/src/img/bg21.png', 'Space Exploration Ebook', 'An ebook that predicts upcoming technology trends for the next year, including AI developments'),
+(3, 'http://localhost:5173/src/img/bg22.png', 'Quantum Computing Whitepaper', 'An in-depth whitepaper exploring the principles, applications.');
+
+
+
+
+CREATE TABLE more (
+    id SERIAL PRIMARY KEY,
+    name varchar,
+    info varchar
+);
+INSERT INTO more (id, name, info) VALUES
+(1, '', '', ''),
+(2, '', '', ''),
+(3, '', '', ''),
+(4, '', '', ''),
+(5, '', '', '');
