@@ -47,6 +47,59 @@
             .text{
                 height: 69%;
                 width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: space-evenly;
+                position: relative;
+                overflow: hidden;
+                border-bottom: #262626 1px solid;
+                div{
+                    width: 90%;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    p{
+                        width: 85%;
+                        color: #98989A;
+                    }
+                }
+                div:first-child{
+                    height: 42%;
+                }
+                div:last-child{
+                    height: 24%;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    z-index: 1;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    height: 45%;
+                    background: linear-gradient(
+                        to bottom,
+                        transparent,
+                        #141414
+                    );
+                }
+                button{
+                    height: 8.5%;
+                    width: 15%;
+                    position: absolute;
+                    z-index: 2;
+                    bottom: 8%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-color: #141414;
+                    border: #262626 1px solid;
+                    color: #98989A;
+                    border-radius: 0.5rem;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    white-space: nowrap;
+                }
             }
         }
         .right{

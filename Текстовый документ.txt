@@ -135,7 +135,26 @@ INSERT INTO trends (id, img, name, info) VALUES
 (2, 'http://localhost:5173/src/img/bg21.png', 'Space Exploration Ebook', 'An ebook that predicts upcoming technology trends for the next year, including AI developments'),
 (3, 'http://localhost:5173/src/img/bg22.png', 'Quantum Computing Whitepaper', 'An in-depth whitepaper exploring the principles, applications.');
 
+CREATE TABLE faqq (
+    id SERIAL PRIMARY KEY,
+    question varchar,
+    answer varchar
+);
+INSERT INTO faqq (id, question, answer) VALUES
+(1, 'What is AI?', 'AI stands for Artificial Intelligence, which refers to the simulation of human intelligence in machines. It enables them to perform tasks like problem-solving, learning, and decision-making.'),
+(2, 'How can I listen to your podcasts?', 'AI stands for Artificial Intelligence, which refers to the simulation of human intelligence in machines. It enables them to perform tasks like problem-solving, learning, and decision-making.'),
+(3, 'Are your podcasts free to listen to?', 'AI stands for Artificial Intelligence, which refers to the simulation of human intelligence in machines. It enables them to perform tasks like problem-solving, learning, and decision-making.'),
+(4, 'Can I download episodes to listen offline?', 'AI stands for Artificial Intelligence, which refers to the simulation of human intelligence in machines. It enables them to perform tasks like problem-solving, learning, and decision-making.'),
+(5, 'How often do you release new episodes?', 'AI stands for Artificial Intelligence, which refers to the simulation of human intelligence in machines. It enables them to perform tasks like problem-solving, learning, and decision-making.');
 
+CREATE TABLE contact (
+    id SERIAL PRIMARY KEY,
+    first_name varchar,
+    last_name varchar,
+    email varchar,
+    phone varchar,
+    message varchar
+);
 
 
 CREATE TABLE more (

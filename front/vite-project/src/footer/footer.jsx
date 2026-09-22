@@ -6,6 +6,13 @@ import axios from "axios";
 
 
 function Footer(){
+    const [footr, setFootr] = useState([]); 
+    useEffect(() => {
+        axios.get("http://localhost:3000/api/footr")
+        .then(res => setFootr(res.data))
+        .catch(err => console.error(err));
+    }, []);
+
     return(
      <>
         <footer>
@@ -19,27 +26,14 @@ function Footer(){
                     </div>
                 </div>
                 <div className={styles.blocks}>
+                    {footr.map((item, index) => (
                     <div className={styles.block}>
                         <div>
-                            <h2>Resource Access</h2>
+                            <h2>{item.name}</h2>
                             <img src={im.link} alt="" />
                         </div>
-                        <p>Visitors can access a wide range of resources, including ebooks, whitepapers, reports.</p>
-                    </div>
-                    <div className={styles.block}>
-                        <div>
-                            <h2>Community Forum</h2>
-                            <img src={im.link} alt="" />
-                        </div>
-                        <p>Join our active community forum to discuss industry trends, share insights, and collaborate with peers.</p>
-                    </div>
-                    <div className={styles.block}>
-                        <div>
-                            <h2>Tech Events</h2>
-                            <img src={im.link} alt="" />
-                        </div>
-                        <p>Stay updated on upcoming tech events, webinars, and conferences to enhance your knowledge.</p>
-                    </div>
+                        <p>{item.info}</p>
+                    </div>))}
                 </div>
             </div>
             <div className={styles.footer}>

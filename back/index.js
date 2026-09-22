@@ -110,3 +110,42 @@ app.get("/api/trends", async (req, res) => {
     res.status(500).send("Server error");
   }
 });
+app.get("/api/faqq", async (req, res) => {
+  try {
+    const result = await pool.query("SELECT id, question, answer FROM faqq");
+    res.json(result.rows);
+  } catch (err) {
+    console.error("Ошибка запроса к БД:", err);
+    res.status(500).send("Server error");
+  }
+});
+app.post('/api/contact', async (req, res) => {
+    const {
+        firstName,
+        lastName,
+        email,
+        phone,
+        message
+    } = req.body
+    try {
+        const result = await pool.query(
+            `INSERT INTO contact 
+            (first_name, last_name, email, phone, message) 
+            VALUES ($1, $2, $3, $4, $5)
+            RETURNING *`,
+            [
+                firstName,
+                lastName,
+                email,
+                phone,
+                message
+            ]
+        )
+        res.status(201).json(result.rows[0])
+    } catch (error) {
+        console.error('Ошибка:', error)
+        res.status(500).json({
+            error: error.message
+        })
+    }
+})

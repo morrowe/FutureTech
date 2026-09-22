@@ -19,7 +19,7 @@ function Header(){
                     <NavLink to={'/page4'} >Podcasts</NavLink>
                     <NavLink to={'/page5'} >Resources</NavLink>
                 </nav> 
-                <button>Contact Us</button>
+                <button><NavLink to={'/page6'} >Contact Us</NavLink></button>
             </div>
         </header>
      </>
